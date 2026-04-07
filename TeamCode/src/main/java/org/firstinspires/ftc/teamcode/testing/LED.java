@@ -30,6 +30,11 @@ public class LED {
         set();
     }
 
+    public void setColor(double value) {
+        currentColor = colors.OTHER;
+        led.setPosition(value);
+    }
+
     private void set() {
         switch(currentColor) {
             case OFF:
@@ -71,8 +76,4 @@ public class LED {
                 led.setPosition(0);
         }
     }
-
-
-
-
 }
